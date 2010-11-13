@@ -1,0 +1,2 @@
+make -B \
+&& ./convertN.exe
