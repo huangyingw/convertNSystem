@@ -15,14 +15,18 @@ void Transform(int num,int N)
   S->Push(num%N);
 
 }
-int TransformWithRec(int num,int N)
+void TransformWithRec(int num,int N)
 {
   if( num < N )
   {
-    return num;
+    cout << num<< endl;
   }
-  cout<<TransformWithRec(num%N,N);
-  cout << endl;
+  else
+  {
+    int temp=num%N;
+    cout << temp;
+    TransformWithRec(temp,N);
+  }
 }
 
 int main()
