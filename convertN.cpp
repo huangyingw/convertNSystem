@@ -15,6 +15,9 @@ void Transform(int num,int N)
   S->Push(num%N);
 
 }
+void TransformWithRec(int num,int N)
+{
+}
 
 int main()
 {
