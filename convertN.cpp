@@ -19,13 +19,13 @@ void TransformWithRec(int num,int N)
 {
   if( num < N )
   {
-    cout << num<< endl;
+    cout << num;
   }
   else
   {
     int temp=num%N;
+    TransformWithRec(num/N,N);
     cout << temp;
-    TransformWithRec(temp,N);
   }
 }
 
@@ -43,6 +43,7 @@ int main()
   }
   cout<<endl;
   TransformWithRec(236,8);
+  cout<<endl;
   return 0;
 }
 
