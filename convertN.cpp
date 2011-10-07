@@ -15,6 +15,19 @@ void Transform(int num,int N)
   S->Push(num%N);
 
 }
+void TransformWithRec(int num,int N)
+{
+  if( num < N )
+  {
+    cout << num;
+  }
+  else
+  {
+    int temp=num%N;
+    TransformWithRec(num/N,N);
+    cout << temp;
+  }
+}
 
 int main()
 {
@@ -28,6 +41,8 @@ int main()
   {
     cout<<S->Pop();
   }
+  cout<<endl;
+  TransformWithRec(236,8);
   cout<<endl;
   return 0;
 }
