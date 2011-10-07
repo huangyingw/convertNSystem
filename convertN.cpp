@@ -36,12 +36,14 @@ int main()
   N=8;
   S=new SeqStack<int>();
   S->InitStack();
+  cout<<"stack's method's output"<<endl;
   Transform(num,N);
   while(!S->StackEmpty())
   {
     cout<<S->Pop();
   }
   cout<<endl;
+  cout<<"Rec's method's output"<<endl;
   TransformWithRec(236,8);
   cout<<endl;
   return 0;
