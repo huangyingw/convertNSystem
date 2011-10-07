@@ -17,13 +17,13 @@ void Transform(int num,int N)
 }
 void TransformWithRec(int num,int N)
 {
+  int temp=num%N;
   if( num < N )
   {
     cout << num;
   }
   else
   {
-    int temp=num%N;
     TransformWithRec(num/N,N);
     cout << temp;
   }
