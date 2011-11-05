@@ -17,7 +17,6 @@ void Transform(int num,int N)
 }
 void TransformWithRec(int num,int N)
 {
-  int temp=num%N;
   if( num < N )
   {
     cout << num;
@@ -25,7 +24,7 @@ void TransformWithRec(int num,int N)
   else
   {
     TransformWithRec(num/N,N);
-    cout << temp;
+    cout <<num%N ;
   }
 }
 
