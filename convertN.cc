@@ -4,7 +4,7 @@
 using namespace std;
 SeqStack<int> *S;
 
-//转化为N进制数
+//转锟斤拷为N锟斤拷锟斤拷锟斤拷
 void Transform(int num,int N)
 {
   do
@@ -14,6 +14,18 @@ void Transform(int num,int N)
   }while(num>=N);
   S->Push(num%N);
 
+}
+void TransformWithRec(int num,int N)
+{
+  if( num < N )
+  {
+    cout << num;
+  }
+  else
+  {
+    TransformWithRec(num/N,N);
+    cout <<num%N ;
+  }
 }
 
 int main()
@@ -28,6 +40,8 @@ int main()
   {
     cout<<S->Pop();
   }
+  cout<<endl;
+  TransformWithRec(num,N);
   cout<<endl;
   return 0;
 }
