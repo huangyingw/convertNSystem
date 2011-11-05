@@ -41,7 +41,7 @@ int main()
     cout<<S->Pop();
   }
   cout<<endl;
-  TransformWithRec(236,8);
+  TransformWithRec(num,N);
   cout<<endl;
   return 0;
 }
