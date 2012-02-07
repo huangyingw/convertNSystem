@@ -11,12 +11,11 @@ public class convertNSystem {
 		stack.push(num % N);
 	}
 
-	static void TransformWithRec(int num, int N) {
+	static int TransformWithRec(int num, int N) {
 		if (num < N) {
-			System.out.print(num);
+			return num;
 		} else {
-			TransformWithRec(num / N, N);
-			System.out.print(num % N);
+			return TransformWithRec(num / N, N) * 10 + num % N;
 		}
 	}
 
@@ -31,7 +30,6 @@ public class convertNSystem {
 
 		}
 		System.out.println();
-		TransformWithRec(num, N);
-		System.out.println();
+		System.out.println(TransformWithRec(num, N));
 	}
 }
